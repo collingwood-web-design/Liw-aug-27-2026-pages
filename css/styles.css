@@ -687,8 +687,7 @@ h2 {
 .footer-sketch img {
   width: min(100%, 15.5rem);
   height: auto;
-  opacity: 0.38;
-  mix-blend-mode: screen;
+  opacity: 0.55;
 }
 
 .legal {
