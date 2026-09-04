@@ -621,8 +621,9 @@ h2 {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-template-columns: 1.4fr 1fr 1fr 1.15fr;
   gap: 2rem;
+  align-items: center;
 }
 
 .footer-logo {
@@ -677,6 +678,19 @@ h2 {
   margin-bottom: 0.35rem;
 }
 
+.footer-sketch {
+  display: flex;
+  justify-content: flex-end;
+  pointer-events: none;
+}
+
+.footer-sketch img {
+  width: min(100%, 15.5rem);
+  height: auto;
+  opacity: 0.38;
+  mix-blend-mode: screen;
+}
+
 .legal {
   margin-top: 2rem;
   padding-top: 1rem;
@@ -719,6 +733,10 @@ h2 {
   .compare,
   .two-col {
     grid-template-columns: 1fr;
+  }
+
+  .footer-sketch {
+    display: none;
   }
 
   .topic-list {
