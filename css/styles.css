@@ -681,13 +681,13 @@ h2 {
 .footer-sketch {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   pointer-events: none;
 }
 
 .footer-sketch img {
-  width: min(100%, 15.5rem);
+  width: min(100%, 16.5rem);
   height: auto;
-  opacity: 0.55;
 }
 
 .legal {
@@ -728,14 +728,35 @@ h2 {
   .cards,
   .photo-row,
   .contact-panel,
-  .footer-grid,
   .compare,
   .two-col {
     grid-template-columns: 1fr;
   }
 
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "brand brand"
+      "visit sketch"
+      "contact sketch";
+    align-items: start;
+  }
+
+  .footer-grid > div:first-child {
+    grid-area: brand;
+  }
+
+  .footer-grid > div:nth-child(2) {
+    grid-area: visit;
+  }
+
+  .footer-grid > div:nth-child(3) {
+    grid-area: contact;
+  }
+
   .footer-sketch {
-    display: none;
+    grid-area: sketch;
+    align-self: center;
   }
 
   .topic-list {
@@ -787,5 +808,20 @@ h2 {
 
   .nav-item.open .dropdown {
     display: grid;
+  }
+}
+
+@media (max-width: 520px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "brand"
+      "visit"
+      "contact"
+      "sketch";
+  }
+
+  .footer-sketch {
+    justify-content: flex-start;
   }
 }
