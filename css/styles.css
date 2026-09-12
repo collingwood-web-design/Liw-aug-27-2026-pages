@@ -4,7 +4,7 @@
   --navy-soft: #2c4a6e;
   --cream: #c9d4b8;
   --paper: #dbe3cc;
-  --card: #e8eedf;
+  --card: #e6efd4;
   --tan: #c4a574;
   --tan-deep: #9a7b4f;
   --sage: #5d6f5b;
@@ -469,6 +469,7 @@ h2 {
   flex-direction: column;
   gap: 0.6rem;
   flex: 1;
+  background: var(--card);
 }
 
 .card:not(:has(img)) {
