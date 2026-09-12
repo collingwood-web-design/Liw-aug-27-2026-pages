@@ -4,6 +4,7 @@
   --navy-soft: #2c4a6e;
   --cream: #c9d4b8;
   --paper: #dbe3cc;
+  --card: #e8eedf;
   --tan: #c4a574;
   --tan-deep: #9a7b4f;
   --sage: #5d6f5b;
@@ -433,8 +434,8 @@ h2 {
 }
 
 .card {
-  background: var(--white);
-  border: 1px solid var(--line);
+  background: var(--card);
+  border: 1px solid color-mix(in srgb, var(--sage) 20%, transparent);
   border-radius: var(--radius);
   padding: 0;
   overflow: hidden;
