@@ -516,6 +516,10 @@ h2 {
   border-radius: var(--radius);
 }
 
+.photo-row .polo-hit {
+  object-position: center 70%;
+}
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
