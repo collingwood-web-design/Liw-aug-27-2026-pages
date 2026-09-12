@@ -2,8 +2,8 @@
   --navy: #1a3654;
   --navy-deep: #0f2438;
   --navy-soft: #2c4a6e;
-  --cream: #c5d6c3;
-  --paper: #d4e3d2;
+  --cream: #c9d4b8;
+  --paper: #dbe3cc;
   --tan: #c4a574;
   --tan-deep: #9a7b4f;
   --sage: #5d6f5b;
@@ -220,7 +220,25 @@ a:hover {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(15, 36, 56, 0.15) 0%, rgba(15, 36, 56, 0.72) 100%);
+}
+
+.hero::after {
+  background: linear-gradient(
+    to top,
+    rgba(15, 36, 56, 0.58) 0%,
+    rgba(15, 36, 56, 0.22) 38%,
+    rgba(15, 36, 56, 0.04) 68%,
+    transparent 100%
+  );
+}
+
+.page-hero::after {
+  background: linear-gradient(
+    to top,
+    rgba(15, 36, 56, 0.6) 0%,
+    rgba(15, 36, 56, 0.28) 55%,
+    rgba(15, 36, 56, 0.08) 100%
+  );
 }
 
 .hero-copy,
@@ -241,10 +259,10 @@ a:hover {
 }
 
 .hero .kicker {
-  color: #fff;
-  font-size: 1.2rem;
+  color: var(--tan);
+  font-size: 0.92rem;
   font-weight: 600;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.18em;
 }
 
 .hero h1,
@@ -310,7 +328,7 @@ a:hover {
 
 .page-hero {
   position: relative;
-  min-height: 18rem;
+  min-height: 22rem;
   display: grid;
   align-items: end;
   color: var(--white);
@@ -352,14 +370,14 @@ a:hover {
 }
 
 .eyebrow-lg {
-  color: var(--navy);
-  font-size: 1.2rem;
+  color: var(--tan-deep);
+  font-size: 0.88rem;
   font-weight: 600;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.18em;
 }
 
 .section-navy .eyebrow-lg {
-  color: #fff;
+  color: var(--tan);
 }
 
 h2 {
@@ -418,13 +436,33 @@ h2 {
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 1.4rem;
+  padding: 0;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
   text-decoration: none;
   color: inherit;
   box-shadow: 0 8px 24px rgba(15, 36, 56, 0.04);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.card img {
+  width: 100%;
+  height: 11.5rem;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.card-body {
+  padding: 1.25rem 1.35rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex: 1;
+}
+
+.card:not(:has(img)) {
+  padding: 1.4rem;
 }
 
 .card:hover {
@@ -469,6 +507,23 @@ h2 {
   border-radius: var(--radius);
 }
 
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+.gallery figure {
+  margin: 0;
+}
+
+.gallery img {
+  width: 100%;
+  height: 12.5rem;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
 .quote {
   background: var(--white);
   border-left: 4px solid var(--tan);
@@ -487,6 +542,27 @@ h2 {
 .quote footer {
   color: var(--muted);
   font-size: 0.92rem;
+}
+
+.quote-feature {
+  max-width: 44rem;
+}
+
+.quote-feature blockquote {
+  margin: 0 0 1.4rem;
+}
+
+.quote-feature blockquote p {
+  font-family: var(--font-display);
+  font-size: clamp(1.55rem, 3.4vw, 2.15rem);
+  line-height: 1.35;
+  color: var(--cream);
+  margin: 0 0 0.85rem;
+}
+
+.quote-feature footer {
+  color: var(--tan);
+  font-size: 0.95rem;
 }
 
 .steps {
@@ -724,6 +800,10 @@ h2 {
 }
 
 @media (max-width: 1120px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .split,
   .cards,
   .photo-row,
