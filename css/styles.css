@@ -267,11 +267,16 @@ a:hover {
   margin-bottom: 0.6rem;
 }
 
-.hero .kicker {
-  color: var(--tan);
+.hero .kicker,
+.page-hero .kicker {
+  color: var(--white);
   font-size: 0.92rem;
   font-weight: 600;
   letter-spacing: 0.18em;
+}
+
+.page-hero .kicker-navy {
+  color: var(--navy);
 }
 
 .hero h1,
@@ -383,6 +388,10 @@ a:hover {
   font-size: 0.88rem;
   font-weight: 600;
   letter-spacing: 0.18em;
+}
+
+.eyebrow-navy {
+  color: var(--navy);
 }
 
 .section-navy .eyebrow-lg {
@@ -528,6 +537,15 @@ h2 {
 
 .photo-row .polo-hit {
   object-position: center 70%;
+}
+
+.map-embed iframe {
+  display: block;
+  width: 100%;
+  height: 28rem;
+  border: 0;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
 .gallery {

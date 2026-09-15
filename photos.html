@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Photo picker | Finding Quiet Equine</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .picker-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+      gap: 1.25rem;
+    }
+    .picker-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .picker-card img {
+      width: 100%;
+      height: 16rem;
+      object-fit: cover;
+      background: #ddd;
+    }
+    .picker-card .meta {
+      padding: 1rem 1.1rem 1.2rem;
+    }
+    .picker-card h2 {
+      font-size: 1.35rem;
+      margin: 0 0 0.35rem;
+    }
+    .picker-card p {
+      margin: 0 0 0.4rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--tan-deep);
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html">
+        <img src="images/logo.png" alt="Finding Quiet Equine" width="220" height="149">
+      </a>
+      <a class="header-cta" href="index.html">Back to site</a>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="wrap">
+      <p class="eyebrow">Working page — not in the public nav</p>
+      <h1 style="font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.2rem); color: var(--navy); margin: 0 0 0.6rem;">Public-domain horse photos</h1>
+      <p class="prose">All of these are <strong>CC0 / public domain</strong>. Open a photo in a new tab to see it larger. Tell me the number and which page to put it on (home, about, workshops, etc.).</p>
+
+      <div class="picker-grid" style="margin-top: 2rem;">
+        <article class="picker-card" id="p1">
+          <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Dark_bay_horses_over_a_fence_%28Unsplash%29.jpg/1920px-Dark_bay_horses_over_a_fence_%28Unsplash%29.jpg" target="_blank" rel="noopener">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Dark_bay_horses_over_a_fence_%28Unsplash%29.jpg/800px-Dark_bay_horses_over_a_fence_%28Unsplash%29.jpg" alt="Three bay horses looking over a rusty pipe fence">
+          </a>
+          <div class="meta">
+            <span class="tag">1 · CC0</span>
+            <h2>Bay horses at the fence</h2>
+            <p>Three chestnuts/bays behind a farm fence. Strong home or services hero.</p>
+          </div>
+        </article>
+
+        <article class="picker-card" id="p2">
+          <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Horses_nuzzling_on_a_cold_morning_%28Unsplash%29.jpg/1920px-Horses_nuzzling_on_a_cold_morning_%28Unsplash%29.jpg" target="_blank" rel="noopener">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Horses_nuzzling_on_a_cold_morning_%28Unsplash%29.jpg/800px-Horses_nuzzling_on_a_cold_morning_%28Unsplash%29.jpg" alt="Horses standing close together on a cold morning">
+          </a>
+          <div class="meta">
+            <span class="tag">2 · CC0</span>
+            <h2>Nuzzling on a cold morning</h2>
+            <p>Quiet closeness. Fits Why Finding Quiet, workshops, or a home split.</p>
+          </div>
+        </article>
+
+        <article class="picker-card" id="p3">
+          <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Horse_muzzle_in_black_and_white_%28Unsplash%29.jpg/1280px-Horse_muzzle_in_black_and_white_%28Unsplash%29.jpg" target="_blank" rel="noopener">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Horse_muzzle_in_black_and_white_%28Unsplash%29.jpg/800px-Horse_muzzle_in_black_and_white_%28Unsplash%29.jpg" alt="Black and white close-up of a horse muzzle">
+          </a>
+          <div class="meta">
+            <span class="tag">3 · CC0</span>
+            <h2>Muzzle, black and white</h2>
+            <p>Close, still, tactile. Good for craniosacral or about.</p>
+          </div>
+        </article>
+
+        <article class="picker-card" id="p4">
+          <a href="https://upload.wikimedia.org/wikipedia/commons/7/75/Horses_grooming_each_other_%2829513614584%29.jpg" target="_blank" rel="noopener">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Horses_grooming_each_other_%2829513614584%29.jpg" alt="Two horses grooming each other">
+          </a>
+          <div class="meta">
+            <span class="tag">4 · CC0</span>
+            <h2>Horses grooming each other</h2>
+            <p>Mutual bodywork. Natural match for equine massage.</p>
+          </div>
+        </article>
+
+        <article class="picker-card" id="p5">
+          <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Pferdekoppel_%28Vaals%29.jpg/1280px-Pferdekoppel_%28Vaals%29.jpg" target="_blank" rel="noopener">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Pferdekoppel_%28Vaals%29.jpg/800px-Pferdekoppel_%28Vaals%29.jpg" alt="Horses grazing in a green paddock">
+          </a>
+          <div class="meta">
+            <span class="tag">5 · CC0</span>
+            <h2>Paddock, Vaals</h2>
+            <p>Grazing in a green field. Landscape hero for services or events.</p>
+          </div>
+        </article>
+
+        <article class="picker-card" id="p6">
+          <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Horses_in_Sunriver.jpg/1920px-Horses_in_Sunriver.jpg" target="_blank" rel="noopener">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Horses_in_Sunriver.jpg/800px-Horses_in_Sunriver.jpg" alt="Horses in a pasture in Sunriver, Oregon">
+          </a>
+          <div class="meta">
+            <span class="tag">6 · CC0</span>
+            <h2>Horses in Sunriver</h2>
+            <p>Pasture scene. Soft supporting photo.</p>
+          </div>
+        </article>
+
+        <article class="picker-card" id="p7">
+          <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Wild_horses_2.jpg/1280px-Wild_horses_2.jpg" target="_blank" rel="noopener">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Wild_horses_2.jpg/800px-Wild_horses_2.jpg" alt="Wild horses in an open field">
+          </a>
+          <div class="meta">
+            <span class="tag">7 · CC0</span>
+            <h2>Wild horses 2</h2>
+            <p>Open-field herd. Wide banner or results page.</p>
+          </div>
+        </article>
+
+        <article class="picker-card" id="p8">
+          <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Wild_horses_3.jpg/1280px-Wild_horses_3.jpg" target="_blank" rel="noopener">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Wild_horses_3.jpg/800px-Wild_horses_3.jpg" alt="Wild horses walking through grass">
+          </a>
+          <div class="meta">
+            <span class="tag">8 · CC0</span>
+            <h2>Wild horses 3</h2>
+            <p>Similar herd, different angle.</p>
+          </div>
+        </article>
+
+        <article class="picker-card" id="p9">
+          <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Herd_of_horses_in_Mongolia.jpg/1920px-Herd_of_horses_in_Mongolia.jpg" target="_blank" rel="noopener">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Herd_of_horses_in_Mongolia.jpg/800px-Herd_of_horses_in_Mongolia.jpg" alt="Herd of horses by a stream in Mongolia with sand dunes">
+          </a>
+          <div class="meta">
+            <span class="tag">9 · CC0</span>
+            <h2>Herd in Mongolia</h2>
+            <p>Dramatic dunes and water. Beautiful, more travel than Ontario barn.</p>
+          </div>
+        </article>
+
+        <article class="picker-card" id="p10">
+          <a href="https://upload.wikimedia.org/wikipedia/commons/f/f4/Large_and_small_horse.jpg" target="_blank" rel="noopener">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Large_and_small_horse.jpg" alt="A large horse and a small horse together">
+          </a>
+          <div class="meta">
+            <span class="tag">10 · CC0</span>
+            <h2>Large and small horse</h2>
+            <p>Pair standing together. Workshops or about.</p>
+          </div>
+        </article>
+
+        <article class="picker-card" id="p11">
+          <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Horses_on_a_paved_road_%28Unsplash%29.jpg/1920px-Horses_on_a_paved_road_%28Unsplash%29.jpg" target="_blank" rel="noopener">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Horses_on_a_paved_road_%28Unsplash%29.jpg/800px-Horses_on_a_paved_road_%28Unsplash%29.jpg" alt="Horses standing on a paved road">
+          </a>
+          <div class="meta">
+            <span class="tag">11 · CC0</span>
+            <h2>Horses on a paved road</h2>
+            <p>More documentary than quiet. Optional extra.</p>
+          </div>
+        </article>
+
+        <article class="picker-card" id="p12">
+          <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Horses_%2819534195613%29.jpg/1280px-Horses_%2819534195613%29.jpg" target="_blank" rel="noopener">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Horses_%2819534195613%29.jpg/800px-Horses_%2819534195613%29.jpg" alt="Horse looking toward the camera">
+          </a>
+          <div class="meta">
+            <span class="tag">12 · CC0</span>
+            <h2>Horse portrait</h2>
+            <p>Rob Mitchell, Essex. Direct, simple head shot.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
