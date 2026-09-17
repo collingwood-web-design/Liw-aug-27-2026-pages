@@ -562,6 +562,23 @@ h2 {
   gap: 1.75rem;
 }
 
+.services-overview {
+  width: min(calc(100% - 4rem), var(--max));
+}
+
+.services-lead {
+  margin: 0 0 2rem;
+  max-width: none;
+}
+
+.services-notes {
+  margin-top: 2rem;
+}
+
+.services-notes p {
+  margin: 0 0 0.55rem;
+}
+
 .card {
   background: var(--card);
   border: 1px solid color-mix(in srgb, var(--sage) 20%, transparent);
