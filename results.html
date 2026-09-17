@@ -10,38 +10,43 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script>
+    (function () {
+      if (location.protocol !== "http:" && location.protocol !== "https:") return;
+      if (/\.html$/i.test(location.pathname)) {
+        location.replace(location.pathname.replace(/\.html$/i, "") + location.search + location.hash);
+      }
+    })();
+  </script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <header class="site-header">
+    <header class="site-header">
     <div class="header-inner">
-      <a class="logo" href="index.html">
+      <a class="logo" href="./">
         <img src="images/logo.png" alt="Finding Quiet Equine" width="220" height="149">
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav class="site-nav" id="site-nav" aria-label="Primary">
-        <a href="index.html">Home</a>
+        <a href="./">Home</a>
         <div class="nav-item">
           <button type="button">Services</button>
           <div class="dropdown">
-            <a href="services.html">Overview</a>
-            <a href="equine-massage.html">Equine Massage</a>
-            <a href="craniosacral.html">Craniosacral</a>
-            <a href="workshops.html">Workshops</a>
+            <a href="services">Overview</a>
+            <a href="equine-massage">Equine Massage</a>
+            <a href="craniosacral">Craniosacral</a>
+            <a href="workshops">Workshops</a>
           </div>
         </div>
-        <div class="nav-item">
-          <button type="button">Results</button>
-          <div class="dropdown">
-            <a href="results.html" aria-current="page">Overview</a>
-            <a href="resources.html">Resources</a>
-            <a href="comments.html">Comments</a>
-            <a href="effects.html">Effects</a>
-          </div>
-        </div>
-        <a href="about.html">About Liw</a>
+        <a href="results" aria-current="page">Results</a>
+        <a href="about">About Liw</a>
+        <a class="nav-mobile-cta" href="https://collaborativehealthgroup.janeapp.com/#/staff_member/19" rel="noopener">Book CST</a>
+        <a class="nav-mobile-cta" href="about#contact">Equine contact</a>
       </nav>
-      <a class="header-cta" href="about.html#contact">Book a session</a>
+      <div class="header-ctas">
+        <a class="header-cta header-cta-primary" href="https://collaborativehealthgroup.janeapp.com/#/staff_member/19" rel="noopener">Book CST</a>
+        <a class="header-cta header-cta-secondary" href="about#contact">Equine contact</a>
+      </div>
     </div>
   </header>
 
@@ -57,62 +62,146 @@
     <section class="section">
       <div class="wrap prose">
         <p>The honest way to know if this work helps is to have me out for your horse, then you decide. Photos and the internet can only show so much. Here are three places to start:</p>
+        <nav aria-label="On this page">
+          <ul class="results-jump">
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#comments">Comments</a></li>
+            <li><a href="#effects">Effects</a></li>
+          </ul>
+        </nav>
       </div>
-      <div class="wrap cards" style="margin-top:2rem">
-        <a class="card" href="resources.html">
-          <div class="card-media">
-            <img src="images/horses-sunriver.jpg" alt="Horses in a pasture">
-          </div>
-          <div class="card-body">
-            <h3>Resources</h3>
-            <p>Links and sources from professionals who have been studying horses and massage.</p>
-            <span class="more">Read more</span>
-          </div>
-        </a>
-        <a class="card" href="comments.html">
-          <div class="card-media">
-            <img src="images/woman-petting-horse.jpg" alt="Liw with a calm bay horse">
-          </div>
-          <div class="card-body">
-            <h3>Comments</h3>
-            <p>Notes from riders and owners about how sessions helped their horses.</p>
-            <span class="more">Read comments</span>
-          </div>
-        </a>
-        <a class="card" href="effects.html">
-          <div class="card-media">
-            <img src="https://media.cwd-cdn.com/finding-quiet/images/palomino-withers-after.jpg" alt="Close detail of a horse’s coat after bodywork">
-          </div>
-          <div class="card-body">
-            <h3>Effects portfolio</h3>
-            <p>Before and after photographs of horses who have received a massage.</p>
-            <span class="more">View photos</span>
-          </div>
-        </a>
+    </section>
+
+    <section class="section section-cream reveal" id="resources">
+      <div class="wrap prose">
+        <p class="eyebrow eyebrow-navy">Resources</p>
+        <h2>From other sources</h2>
+        <p>Keeping a horse well — comfortable in her body, happy in her work — is never just one thing. These notes from other equine professionals talk about what massage can do for the horse you ride.</p>
+        <blockquote class="quote">
+          <p>You want to put the horse in the best possible place in his body in order to do the work for you. Working on longitudinal suppleness means you are trying to achieve suppleness over his top line: the poll, neck and back. Something that people don’t often realize is that muscles only contract — they cannot extend. When you want to improve your horse’s relaxation over his back, you are, in fact, trying to create an involuntary response from the horse in which he contracts his abdominal muscles, resulting in the relaxation of the opposing muscles over the back.</p>
+          <footer>From “Understanding longitudinal suppleness with Jacqueline Brooks” by Karen Robinson, <em>Horse Sport</em>, March 2008</footer>
+        </blockquote>
+        <p>I’ll add more here as I keep reading, and as I talk with colleagues who also care for you and your horse.</p>
+      </div>
+    </section>
+
+    <section class="section reveal" id="comments">
+      <div class="wrap prose">
+        <p class="eyebrow eyebrow-navy">Comments</p>
+        <h2>From riders and owners</h2>
+        <p>These notes are from owners whose horses I’ve worked with. They were kind enough to let me share their words.</p>
+      </div>
+      <div class="wrap" style="margin-top:2rem; max-width: 48rem;">
+        <blockquote class="quote">
+          <p>I rode Slim on Sunday in my lesson. He had had the week to relax into it and I honestly didn’t expect to see such a difference. My coach and I attributed the change to suppleness. He was relaxed and listening… the lesson was way more productive because we didn’t spend half of it just getting him to relax into it and round his back.</p>
+          <footer>Nicole Stearns, owner/rider, English</footer>
+        </blockquote>
+        <blockquote class="quote">
+          <p>Liw was able to come right away. She asked lots of questions and saw Sam ridden and got to work. After a short time he fell asleep, looking like he was enjoying his treatment. In a period of three months — massage, dentist, and changing his diet — he looked like an athlete and ready to go to the Royal. I loved Liw’s attitude. She asked the right questions, took her time for horse and rider, and was extremely accommodating.</p>
+          <footer>Stefanie Brueseke, Ainstable Farm</footer>
+        </blockquote>
+        <blockquote class="quote">
+          <p>The days after her massage when I rode her I felt that she was much more fluid and had more flexibility and suppleness — especially in her neck — at the walk and trot. I had a lesson on Wednesday and she felt so much better. Her canter was much, much improved.</p>
+          <footer>Peggy Taylor-Winter, owner/eventing rider</footer>
+        </blockquote>
+        <blockquote class="quote">
+          <p>Corky loves your massages and the effects are lasting. He is simply more relaxed. Following your visits his gaits are springier and I can feel his back lifted and swinging. He is definitely more forward and reaching for the bit. Corky is a remarkable old man and still quite the athlete, and your visits seem to peel back the years.</p>
+          <footer>Kathy Agnew, owner/rider, English</footer>
+        </blockquote>
+        <blockquote class="quote">
+          <p>Liw has worked on several horses for me, my own and others I have in training. She has not only helped the horses perform better, but also helped heal a lesion that one mare had in her back. Another benefit became apparent when Liw helped a client’s horse adjust to new surroundings when we moved her to a new barn. I continue to use Liw and am happy to recommend her.</p>
+          <footer>Heather Collinge, owner/trainer/coach</footer>
+        </blockquote>
+        <blockquote class="quote">
+          <p>We rode her in a mini-rodeo on Saturday and she was fantastic. I’ve never seen her move that smoothly. Kaitlyn felt that she was more responsive and her trot was much smoother than before.</p>
+          <footer>Sharon and Kaitlyn Chapman, owners/riders</footer>
+        </blockquote>
+        <blockquote class="quote">
+          <p>My horse was great after his massage — very happy to be head down a bit round and very quiet (always a sure sign he is comfortable).</p>
+          <footer>Michele Relic, owner/rider, eventing</footer>
+        </blockquote>
+        <blockquote class="quote">
+          <p>After my horse had the massage by Liw, I noticed a difference with his flexion, and had also felt a difference riding him. My horse became more responsive in the cues I was asking and felt more willing.</p>
+          <footer>BM, owner/barrel racer</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="section section-cream reveal" id="effects">
+      <div class="wrap">
+        <div class="prose">
+          <p class="eyebrow eyebrow-navy">Effects</p>
+          <h2>Before and after</h2>
+          <h3>Palomino 96</h3>
+          <p>Shoulder and loin — how she looked when we started, and after the work.</p>
+        </div>
+        <div class="compare">
+          <figure>
+            <img src="https://media.cwd-cdn.com/finding-quiet/images/palomino-withers-before.jpg" alt="Palomino withers before treatment">
+            <figcaption>Withers — before</figcaption>
+          </figure>
+          <figure>
+            <img src="https://media.cwd-cdn.com/finding-quiet/images/palomino-withers-after.jpg" alt="Palomino withers after treatment">
+            <figcaption>Withers — after</figcaption>
+          </figure>
+          <figure>
+            <img src="https://media.cwd-cdn.com/finding-quiet/images/palomino-loin-before.jpg" alt="Palomino loin before treatment">
+            <figcaption>Loin — before</figcaption>
+          </figure>
+          <figure>
+            <img src="https://media.cwd-cdn.com/finding-quiet/images/palomino-loin-after.jpg" alt="Palomino loin after treatment">
+            <figcaption>Loin — after</figcaption>
+          </figure>
+        </div>
+
+        <div class="prose">
+          <h2>Appaloosa 16</h2>
+          <p>The same look at an Appaloosa, before and after a massage.</p>
+        </div>
+        <div class="compare">
+          <figure>
+            <img src="https://media.cwd-cdn.com/finding-quiet/images/appy-withers-before.jpg" alt="Appaloosa withers before treatment">
+            <figcaption>Withers — before</figcaption>
+          </figure>
+          <figure>
+            <img src="https://media.cwd-cdn.com/finding-quiet/images/appy-withers-after.jpg" alt="Appaloosa withers after treatment">
+            <figcaption>Withers — after</figcaption>
+          </figure>
+          <figure>
+            <img src="https://media.cwd-cdn.com/finding-quiet/images/appy-loin-before.jpg" alt="Appaloosa loin before treatment">
+            <figcaption>Loin — before</figcaption>
+          </figure>
+          <figure>
+            <img src="https://media.cwd-cdn.com/finding-quiet/images/appy-loin-after.jpg" alt="Appaloosa loin after treatment">
+            <figcaption>Loin — after</figcaption>
+          </figure>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+    <footer class="site-footer">
     <div class="wrap footer-grid">
       <div>
-        <a class="footer-logo" href="index.html">
+        <a class="footer-logo" href="./">
           <img src="images/logo.png" alt="Finding Quiet Equine" width="220" height="149">
         </a>
-        <p>I’d love to meet you and your horse. Equine massage, craniosacral therapy, and workshops across southern Ontario’s Georgian Triangle.</p>
+        <p>Creating a Healthier World from Liw’s Hands to Yours. Craniosacral therapy, equine bodywork, and workshops for wellness across southern Ontario’s Georgian Triangle.</p>
       </div>
       <div>
         <h3>Visit</h3>
         <ul>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About Liw</a></li>
-          <li><a href="comments.html">Client comments</a></li>
-          <li><a href="events.html">Event archive</a></li>
-          <li><a href="links.html">Links</a></li>
+          <li><a href="services">Services</a></li>
+          <li><a href="about">About Liw</a></li>
+          <li><a href="results">Results</a></li>
+          <li><a href="events">Event archive</a></li>
+          <li><a href="links">Links</a></li>
         </ul>
       </div>
       <div>
-        <h3>Contact</h3>
+        <h3>Book / contact</h3>
+        <p><a href="https://collaborativehealthgroup.janeapp.com/#/staff_member/19" rel="noopener">Book CST at Collaborative Health</a></p>
+        <p>Equine &amp; workshops:</p>
         <p><a href="tel:+17058885290">(705) 888-5290</a></p>
         <p><a href="mailto:findingquiet@gmail.com">findingquiet@gmail.com</a></p>
       </div>

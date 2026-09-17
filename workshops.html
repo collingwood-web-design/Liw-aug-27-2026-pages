@@ -10,38 +10,43 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script>
+    (function () {
+      if (location.protocol !== "http:" && location.protocol !== "https:") return;
+      if (/\.html$/i.test(location.pathname)) {
+        location.replace(location.pathname.replace(/\.html$/i, "") + location.search + location.hash);
+      }
+    })();
+  </script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <header class="site-header">
+    <header class="site-header">
     <div class="header-inner">
-      <a class="logo" href="index.html">
+      <a class="logo" href="./">
         <img src="images/logo.png" alt="Finding Quiet Equine" width="220" height="149">
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav class="site-nav" id="site-nav" aria-label="Primary">
-        <a href="index.html">Home</a>
+        <a href="./">Home</a>
         <div class="nav-item">
           <button type="button">Services</button>
           <div class="dropdown">
-            <a href="services.html">Overview</a>
-            <a href="equine-massage.html">Equine Massage</a>
-            <a href="craniosacral.html">Craniosacral</a>
-            <a href="workshops.html" aria-current="page">Workshops</a>
+            <a href="services">Overview</a>
+            <a href="equine-massage">Equine Massage</a>
+            <a href="craniosacral">Craniosacral</a>
+            <a href="workshops" aria-current="page">Workshops</a>
           </div>
         </div>
-        <div class="nav-item">
-          <button type="button">Results</button>
-          <div class="dropdown">
-            <a href="results.html">Overview</a>
-            <a href="resources.html">Resources</a>
-            <a href="comments.html">Comments</a>
-            <a href="effects.html">Effects</a>
-          </div>
-        </div>
-        <a href="about.html">About Liw</a>
+        <a href="results">Results</a>
+        <a href="about">About Liw</a>
+        <a class="nav-mobile-cta" href="https://collaborativehealthgroup.janeapp.com/#/staff_member/19" rel="noopener">Book CST</a>
+        <a class="nav-mobile-cta" href="about#contact">Equine contact</a>
       </nav>
-      <a class="header-cta" href="about.html#contact">Book a session</a>
+      <div class="header-ctas">
+        <a class="header-cta header-cta-primary" href="https://collaborativehealthgroup.janeapp.com/#/staff_member/19" rel="noopener">Book CST</a>
+        <a class="header-cta header-cta-secondary" href="about#contact">Equine contact</a>
+      </div>
     </div>
   </header>
 
@@ -92,26 +97,28 @@
     </section>
   </main>
 
-  <footer class="site-footer">
+    <footer class="site-footer">
     <div class="wrap footer-grid">
       <div>
-        <a class="footer-logo" href="index.html">
+        <a class="footer-logo" href="./">
           <img src="images/logo.png" alt="Finding Quiet Equine" width="220" height="149">
         </a>
-        <p>I’d love to meet you and your horse. Equine massage, craniosacral therapy, and workshops across southern Ontario’s Georgian Triangle.</p>
+        <p>Creating a Healthier World from Liw’s Hands to Yours. Craniosacral therapy, equine bodywork, and workshops for wellness across southern Ontario’s Georgian Triangle.</p>
       </div>
       <div>
         <h3>Visit</h3>
         <ul>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About Liw</a></li>
-          <li><a href="comments.html">Client comments</a></li>
-          <li><a href="events.html">Event archive</a></li>
-          <li><a href="links.html">Links</a></li>
+          <li><a href="services">Services</a></li>
+          <li><a href="about">About Liw</a></li>
+          <li><a href="results">Results</a></li>
+          <li><a href="events">Event archive</a></li>
+          <li><a href="links">Links</a></li>
         </ul>
       </div>
       <div>
-        <h3>Contact</h3>
+        <h3>Book / contact</h3>
+        <p><a href="https://collaborativehealthgroup.janeapp.com/#/staff_member/19" rel="noopener">Book CST at Collaborative Health</a></p>
+        <p>Equine &amp; workshops:</p>
         <p><a href="tel:+17058885290">(705) 888-5290</a></p>
         <p><a href="mailto:findingquiet@gmail.com">findingquiet@gmail.com</a></p>
       </div>

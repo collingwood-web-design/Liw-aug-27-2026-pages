@@ -1,0 +1,11 @@
+﻿---
+description: Clean extensionless URLs for this GitHub Pages site
+alwaysApply: true
+---
+
+# Clean URLs
+
+- In-page links: path-relative, no `.html` (`href="about"`, home `href="./"`).
+- Keep on-disk `*.html` files; do not strip asset extensions.
+- SEO (when a production domain exists): absolute clean URLs only — never github.io, never `.html`.
+- Client redirect: strip `.html` from pathname on http(s) only.
